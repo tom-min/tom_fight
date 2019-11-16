@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+".\objects\core_cm3.o"
+".\objects\system_stm32f10x.o"
+".\objects\startup_stm32f10x_hd.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_usart.o"
+".\objects\main.o"
+".\objects\stm32f10x_it.o"
+".\objects\retarget.o"
+".\objects\stm32f10x_tim.o"
+--strict --scatter ".\Objects\usart(poll).sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\usart(poll).map" -o .\Objects\usart(poll).axf
